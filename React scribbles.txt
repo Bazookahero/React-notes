@@ -1,3 +1,5 @@
+								---JS Recap---
+
 var is an old variable in JS, let is the new and preferred version of var.
 
 const is a constant "variable". Preferred usage is when you don't want to accidentally re-assign a value to the variable.
@@ -14,7 +16,7 @@ And when you want to pass in an unspecified amount of arguments into a function 
 
 Reference types are for example Objects and Arrays. When you assign an object to another object, instead of copying the value directly it instead copies the "pointer" that points to a value in your storage.
 example:
-let Person1 = {
+const Person1 = {
 name: "Alex"
 }
 const Person2 = Person1;
@@ -22,7 +24,7 @@ Person1.name = "Sayeh"
 console.log(Person2.name)
 this will output "Sayeh" even though you assigned Person1 to Person2 before changing the name of Person1.
 
-Primitive values just copies the value directly like
+Primitive types just copies the value directly like
 let a = 2
 let b = a
 a = 5
@@ -34,3 +36,60 @@ const newNumbers = numbers.map((num) => {
 	return num * 2;
 });
 console.log(newNumbers) will output [2, 4, 6]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+								---React basics---
+
+React is a JS library for building user interfaces. (HTML, CSS & JS are about building user interfaces as well)
+
+React is all about "components", every user interface consists of multiple reusable components. The same component can look different depending on the data it recieves.
+
+Not only is this structure good because of the reusability but for the separation of concerns as well. Components have different specified tasks.
+
+A component is built out of HTML, CSS & JavaScript together, and is basically a custom HTML element.
+A component in react is just a javascript function.
+
+Node.js is a runtime for JS which allows you to run JS outside the browser. You need node.js to create your react app. (nodejs.org)
+npx create-react-app 'appName'
+cd 'appName'
+npm start
+
+Npm = Node Package Manager
+
+If you download a react app from github you need to do "npm install bootstrap" to get the node_modules before you can do "npm start".
+
+Ctrl+C in the terminal will cancel the running app.
+
+Always have the app running when you're working on the code to see changes made.
+
+Index.js is the first file to get executed when running your program.
+
+In react you can import CSS files to your javascript files in contrast to regular javascript.
+
+The only file we use in the default public folder is the index.html file which holds a div element with id "root"
+
+Your code is transformed "behind the scenes", to view this code in the browser: go to inspect->sources->static/js->main.chunk.js
+
+A good practice is to put new components into new files inside a new folder. 1 file per component.
+
+The default App.js is the "root" component which will be the component to render the other components.
+
+The standard naming convention for files is pascal case which uses uppercase letter at the start of every word. (PascalCase) And it should describe the contents of the file. The function inside the file should also repeat the file name.
+
+You are only allowed to have one root element per Return statement. Practically you can just put the jsx code inside a <div>.
+
+You can run basic javascript expressions inside curly brackets {jsCode}.
+
+Data is passed in the App.js file through properties or "props". You set properties to the imported components in App.js using regular HTML and JS. (properties are also called attributes)
+These values are then passed in as parameters to the corresponding function as an object which holds all the information you passed to it, even if you passed it as multiple props.
+These values come in "key-value pairs". {props.name} for example.
+
+function App() {
+  return (
+    <div>
+      <SomeItem title={items[0].name}></SomeItem>
+    </div>
+  )
+}
+this title is being passed to the SomeItem function as props.title.
+
