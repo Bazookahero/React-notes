@@ -84,6 +84,8 @@ Data is passed in the App.js file through properties or "props". You set propert
 These values are then passed in as parameters to the corresponding function as an object which holds all the information you passed to it, even if you passed it as multiple props.
 These values come in "key-value pairs". {props.name} for example.
 
+import SomeItem from './items/SomeItem'
+
 function App() {
 const items = [{name: "Apple"}]
   return (
