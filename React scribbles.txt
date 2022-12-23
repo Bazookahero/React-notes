@@ -92,5 +92,11 @@ const items = [{name: "Apple"}]
     </div>
   )
 }
+
 this title is being passed to the SomeItem function as props.title with the value "Apple".
+
+const SomeItem = (props) => {
+return <div>{props.title}<div/>
+}
+
 
