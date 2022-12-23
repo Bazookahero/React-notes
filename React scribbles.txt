@@ -85,7 +85,7 @@ These values are then passed in as parameters to the corresponding function as a
 These values come in "key-value pairs". {props.name} for example.
 
 function App() {
-const items = [{name = "Apple"}]
+const items = [{name: "Apple"}]
   return (
     <div>
       <SomeItem title={items[0].name}></SomeItem>
