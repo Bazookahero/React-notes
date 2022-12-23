@@ -1,0 +1,36 @@
+var is an old variable in JS, let is the new and preferred version of var.
+
+const is a constant "variable". Preferred usage is when you don't want to accidentally re-assign a value to the variable.
+
+Arrow functions looks like: const ArrowFunction = () => {some code} and can take a parameter. If you have exactly 1 paramaterer you can omit the parenthesis.
+
+Export default makes you always import that specific thing from that file.
+
+If you want to export multiple functions you'll have to destructure them when importing using {aName} from 'fileName', in this case you just use export 'functionName' and omit the default.
+
+you can use the spread and rest operator "..." when you want to include an old array in a new for example like newArray = [...oldArray, 4, 5].
+
+And when you want to pass in an unspecified amount of arguments into a function like const Function = (...args) => {code}.
+
+Reference types are for example Objects and Arrays. When you assign an object to another object, instead of copying the value directly it instead copies the "pointer" that points to a value in your storage.
+example:
+const Person1 = {
+name: "Alex"
+}
+const Person2 = Person1;
+Person1.name = "Sayeh"
+console.log(Person2.name)
+this will output "Sayeh" even though you assigned Person1 to Person2 before changing the name of Person1.
+
+Primitive values just copies the value directly like
+let a = 2
+let b = a
+a = 5
+console.log(b) will output 2.
+
+good array functions to remember: .map, .filter, .find, .findIndex, .reduce, .concat, .slice, .splice
+const numbers = [1, 2, 3]
+const newNumbers = numbers.map((num) => {
+	return num * 2;
+});
+console.log(newNumbers) will output [2, 4, 6]
