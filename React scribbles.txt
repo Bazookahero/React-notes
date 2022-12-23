@@ -14,7 +14,7 @@ And when you want to pass in an unspecified amount of arguments into a function 
 
 Reference types are for example Objects and Arrays. When you assign an object to another object, instead of copying the value directly it instead copies the "pointer" that points to a value in your storage.
 example:
-const Person1 = {
+let Person1 = {
 name: "Alex"
 }
 const Person2 = Person1;
